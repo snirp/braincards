@@ -13,6 +13,8 @@ psycopg2 = "*"
 django-allauth = "*"
 django-email-bandit = "*"
 django-extensions = "*"
+djangorestframework = "*"
+django-ordered-model = "*"
 
 [requires]
 python_version = "3.7"

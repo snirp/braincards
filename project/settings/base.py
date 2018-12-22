@@ -14,10 +14,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'ordered_model',
+    'rest_framework',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'users',
+    'users.apps.UsersConfig',
+    'cards.apps.CardsConfig',
+    'rest',
     'django_extensions',
 ]
 

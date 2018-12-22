@@ -50,3 +50,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_absolute_url(self):
         return "/accounts/user/%i/" % (self.pk)
 
+    def __str__(self):
+        return self.email
+
