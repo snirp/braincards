@@ -1,0 +1,16 @@
+<html>
+  <head></head>
+  <body>
+    <h1>Dit is het profiel</h1>
+    <script>
+      window.opener.postMessage(
+        {
+          sender: 'server',
+          user: 'roy',
+        },
+        'http://127.0.0.1:8000'
+      )
+    </script>
+  </body>
+</html>
+

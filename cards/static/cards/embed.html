@@ -67,6 +67,8 @@
 
         renderQuestions()
 
+        let popup;
+
         function receiver(ev){
           console.log("We've got a message!");
           console.log("* message: ", ev.data);
@@ -74,13 +76,25 @@
           console.log("* source: ", ev.source);
         }
 
-        window.addEventListener('message', receiver, false)
+        window.addEventListener('message', receiver, false);
+
+        function afterLogin(ev){
+          if (ev.data.sender == 'server'){
+            console.log(ev.data.user);
+            popup.close();
+          }
+        };
+
+        window.addEventListener('message', afterLogin, false);
 
         const w = window.parent;
         w.postMessage('Posted from the embed', 'http://127.0.0.1:8001');
 
+        function openLoginWindow(){
+          popup = window.open('http://127.0.0.1:8000/accounts/login')
+        }
 
       </script>
-
+      <button onclick="openLoginWindow()">Click me</button>
   </body>
 </html>
