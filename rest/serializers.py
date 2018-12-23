@@ -1,8 +1,10 @@
 from django.contrib.auth.models import Group
 from rest_framework import serializers
+from rest_framework.reverse import reverse
 
 from users.models import User
 from cards.models import Owner, Website, Page, Question, Choice, Answer
+
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -51,3 +53,8 @@ class AnswerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Answer
         fields = ('url', 'id', 'question', 'user', 'correct', 'date_added')
+
+
+from rest_framework import serializers
+
+

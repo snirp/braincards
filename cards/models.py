@@ -37,6 +37,9 @@ class Page(models.Model):
 
     def __str__(self):
         return self.address
+    
+    class Meta:
+        unique_together = ('website', 'identifier',)
 
 
 class Question(OrderedModel):

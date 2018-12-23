@@ -15,6 +15,7 @@ django-email-bandit = "*"
 django-extensions = "*"
 djangorestframework = "*"
 django-ordered-model = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.7"
